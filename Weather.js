@@ -1,5 +1,16 @@
 const apiKey = 'Your-API-Key'; // Get from OpenWeatherMap
 
+const timeRanges = [
+  { start: 0, end: 3, color: '#0C090A' },   // Deep Night
+  { start: 3, end: 6, color: '#DA7F7D' },   // Pre-dawn/Sunrise
+  { start: 6, end: 9, color: '#ffc400ff' }, // Sunrise/Early Morning
+  { start: 9, end: 12, color: '#568CD8' },  // Morning
+  { start: 12, end: 15, color: '#D8B382' }, // Afternoon
+  { start: 15, end: 18, color: '#FD5E53' }, // Late Afternoon/Pre-sunset
+  { start: 18, end: 21, color: '#4E518B' }, // Sunset/Twilight
+  { start: 21, end: 24, color: '#000614ff' } // Night
+];
+
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', () => {
 const city = document.getElementById('city-input').value;
@@ -48,21 +59,10 @@ function displayWeather(data) {
 
     // Apply CSS based on the local hour (using the body as an example)
     // Apply CSS based on the local hour (using the body as an example)
-if (localHour >= 0 && localHour < 3) {
-    document.body.style.backgroundColor = '#0C090A'; // Deep Night
-} else if (localHour >= 3 && localHour < 6) {
-    document.body.style.backgroundColor = '#DA7F7D'; // Pre-dawn/Sunrise
-} else if (localHour >= 6 && localHour < 9) {
-    document.body.style.backgroundColor = '#ffc400ff'; // Sunrise/Early Morning
-} else if (localHour >= 9 && localHour < 12) {
-    document.body.style.backgroundColor = '#568CD8'; // Morning
-} else if (localHour >= 12 && localHour < 15) {
-    document.body.style.backgroundColor = '#D8B382'; // Afternoon
-} else if (localHour >= 15 && localHour < 18) {
-    document.body.style.backgroundColor = '#FD5E53'; // Late Afternoon/Pre-sunset
-} else if (localHour >= 18 && localHour < 21) {
-    document.body.style.backgroundColor = '#4E518B'; // Sunset/Twilight
-} else if (localHour >= 21 && localHour < 0) {
-    document.body.style.backgroundColor = '#000614ff'; // Night
+
+const currentRange = timeRanges.find(range => localHour >= range.start && localHour < range.end);
+
+if (currentRange) {
+  document.body.style.backgroundColor = currentRange.color;
 }
 }
