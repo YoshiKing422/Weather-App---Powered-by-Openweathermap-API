@@ -1,4 +1,4 @@
-const apiKey = '5035ef5276aa5051a32a406af7e9711e'; // Get from OpenWeatherMap
+const apiKey = 'Your-API-Key'; // Get from OpenWeatherMap
 
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', () => {
@@ -7,7 +7,7 @@ getWeather(city);
 });
 
 function getWeather(city) {
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`; // Using imperial units for Fahrenheit, you can change to metric for Celsius
 
 fetch(apiUrl)
 .then(response => response.json())
