@@ -3,7 +3,7 @@
 Preparing Steps:
 1. Get the Live Server extension from the VS Code marketplace
 
-2. Get your free API key by singing up here: https://openweathermap.org
+2. Get your free Current Weather Data API key by singing up here: https://openweathermap.org/api
 
 How to use:
 1. Place in the city you want to see the weather for
