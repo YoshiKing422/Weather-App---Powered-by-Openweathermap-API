@@ -8,4 +8,4 @@ Preparing Steps:
 How to use:
 1. Place in the city you want to see the weather for
 
-2. See the current temperature in F, current condition, humidity, visibility, sunrise and sunset, and the local time and date.
+2. See the current temperature in Farenheit (you can change it to the metric system), current condition, humidity, visibility, sunrise and sunset, and the local time and date.
