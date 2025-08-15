@@ -1,14 +1,30 @@
 const apiKey = 'Your-API-Key'; // Get from OpenWeatherMap
 
 const timeRanges = [
-  { start: 0, end: 3, color: '#0C090A' },   // Deep Night
-  { start: 3, end: 6, color: '#DA7F7D' },   // Pre-dawn/Sunrise
-  { start: 6, end: 9, color: '#ffc400ff' }, // Sunrise/Early Morning
-  { start: 9, end: 12, color: '#568CD8' },  // Morning
-  { start: 12, end: 15, color: '#D8B382' }, // Afternoon
-  { start: 15, end: 18, color: '#FD5E53' }, // Late Afternoon/Pre-sunset
-  { start: 18, end: 21, color: '#4E518B' }, // Sunset/Twilight
-  { start: 21, end: 24, color: '#000614ff' } // Night
+  { start: 0, end: 1, color: '#00001a' },   // Midnight (Deep, dark blue)
+  { start: 1, end: 2, color: '#0a0a29' },   // Late Night
+  { start: 2, end: 3, color: '#14143d' },   // Late Night
+  { start: 3, end: 4, color: '#1e1e52' },   // Pre-dawn
+  { start: 4, end: 5, color: '#4d4d6e' },   // Pre-dawn light
+  { start: 5, end: 6, color: '#9d9db4' },   // Dawn (Soft gray-blue)
+  { start: 6, end: 7, color: '#c3a28b' },   // Sunrise (Soft browns and pinks)
+  { start: 7, end: 8, color: '#ffb56b' },   // Early Morning (Golden light)
+  { start: 8, end: 9, color: '#ffdc7d' },   // Morning (Brighter golden)
+  { start: 9, end: 10, color: '#74aaff' },  // Morning (Clear blue sky)
+  { start: 10, end: 11, color: '#4990ff' }, // Mid-morning (Vivid blue sky)
+  { start: 11, end: 12, color: '#4990ff' }, // Late Morning (Vivid blue sky)
+  { start: 12, end: 13, color: '#74aaff' }, // Midday (Slightly paler blue)
+  { start: 13, end: 14, color: '#74aaff' }, // Early Afternoon
+  { start: 14, end: 15, color: '#97bfff' }, // Mid-afternoon (Lightening blue)
+  { start: 15, end: 16, color: '#cce2ff' }, // Late Afternoon (Even lighter blue)
+  { start: 16, end: 17, color: '#ff9a59' }, // Pre-sunset (Orange-pink)
+  { start: 17, end: 18, color: '#ff7b33' }, // Sunset (Vibrant orange)
+  { start: 18, end: 19, color: '#b8492c' }, // Late Sunset (Deepening red-orange)
+  { start: 19, end: 20, color: '#703357' }, // Twilight (Purple-gray)
+  { start: 20, end: 21, color: '#412255' }, // Early Night
+  { start: 21, end: 22, color: '#2b153d' }, // Night
+  { start: 22, end: 23, color: '#1f0d38' }, // Deep Night
+  { start: 23, end: 24, color: '#14002e' }  // Deep Night
 ];
 
 const searchBtn = document.getElementById('search-btn');
